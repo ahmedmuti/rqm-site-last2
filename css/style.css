@@ -314,6 +314,16 @@ button.nav-link {
 
 }
 
+.tab-pane {
+    visibility: hidden !important;
+    height: 0;
+    overflow: hidden;
+}
+
+.tab-pane.active {
+    visibility: visible !important;
+    height: auto;
+}
 
 
 /* footer  section */

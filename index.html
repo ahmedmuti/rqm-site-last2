@@ -512,12 +512,8 @@
     <script src="./js/components/footer.js"></script>
     <script src="js/main.js"></script>
     <script>
-
-
-        // let swiperInstance = null
         let swiperInstance = null
         function initializeSwiper() {
-
             if (swiperInstance) {
                 swiperInstance.destroy(true, true);
             }
@@ -532,10 +528,8 @@
                     delay: 1,
                     disableOnInteraction: false,
                 },
-                // rtl: true
             });
         }
-
         // Initialize Swiper when the page loads (for the active tab)
         if (document.querySelector(".tab-pane.active .swiper-marquee")) {
             initializeSwiper();
@@ -543,19 +537,19 @@
         // Reinitialize Swiper when switching tabs
         document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(function (tab) {
             tab.addEventListener("shown.bs.tab", function () {
-                initializeSwiper();
+                initializeSwiper()
             });
+        });
+        // Fix for mobile: Reinitialize when the window resizes
+        window.addEventListener("resize", function () {
+            setTimeout(initializeSwiper, 300);
         });
     </script>
 
     <script>
-
         (function () {
-
-            // let swiperInstance = null
             let swiperInstance2 = null
             function initializeSwiper() {
-
                 if (swiperInstance2) {
                     swiperInstance2.destroy(true, true);
                 }
@@ -570,10 +564,8 @@
                         delay: 1,
                         disableOnInteraction: false,
                     },
-                    // rtl: true
                 });
             }
-
             // Initialize Swiper when the page loads (for the active tab)
             if (document.querySelector(".tab-pane.active .swiper-marquee")) {
                 initializeSwiper();
@@ -581,8 +573,12 @@
             // Reinitialize Swiper when switching tabs
             document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(function (tab) {
                 tab.addEventListener("shown.bs.tab", function () {
-                    initializeSwiper();
+                    initializeSwiper()
                 });
+            });
+            // Fix for mobile: Reinitialize when the window resizes
+            window.addEventListener("resize", function () {
+                setTimeout(initializeSwiper, 300);
             });
         })();
     </script>
