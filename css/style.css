@@ -130,6 +130,31 @@ footer p {
 }
 
 /* end of the global styles */
+.navbar-bg {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(130px);
+    display: flex;
+    max-width: 1148px;
+    padding: 15px 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.contact-us {
+    border-radius: 8px;
+    background: #EEF9F9;
+    padding: 10px 28px;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.scrolled {
+    background-color: var(--main-color);
+}
+
 header {
     background-image: url(../imgs/header.webp);
     background-repeat: no-repeat;

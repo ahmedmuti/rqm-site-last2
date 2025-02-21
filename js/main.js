@@ -15,3 +15,27 @@ var swiper1 = new Swiper(".mySwiper", {
         1024: { slidesPerView: 3 }
     },
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let navbar = document.getElementById("navbar");
+    let stepsSection = document.getElementById("steps");
+
+    // Add shadow effect when scrolling
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > (stepsSection.offsetTop - 100)) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // Add active link effect
+    // document.querySelectorAll(".nav-link").forEach(function (link) {
+    //     link.addEventListener("click", function () {
+    //         document.querySelectorAll(".nav-link").forEach((el) => el.classList.remove("active"));
+    //         this.classList.add("active");
+    //     });
+    // });
+});
