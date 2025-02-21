@@ -1,0 +1,275 @@
+/* global styles */
+:root {
+    --main-color: #142A53;
+    --font-small: 2vw;
+    --font-medium: 3vw;
+    --font-large: 4vw;
+    --padding: 2vh;
+    --section-margin: 60px;
+
+
+    /* Extra Small */
+    --space-xs: clamp(0.5rem, 1vw, 1rem);
+    /* Small */
+    --space-sm: clamp(1rem, 2vw, 1.5rem);
+    /* Medium */
+    --space-md: clamp(1.5rem, 3vw, 2rem);
+    /* Large */
+    --space-lg: clamp(2rem, 4vw, 3rem);
+    /* Extra Large */
+    --space-xl: clamp(3rem, 5vw, 4rem);
+}
+
+body {
+    font-family: "Almarai", serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.6;
+    background-color: #fbfbfb;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 0 0 5px #00000069 inset;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.main-bg {
+    background-color: var(--main-color);
+}
+
+/* General Section Spacing */
+section {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: clamp(1.125rem, 2vw, 1.75rem);
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+}
+
+p {
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    line-height: 1.8;
+}
+
+
+/* Button Text */
+.btn {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-weight: bold;
+    padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+}
+
+/* Lead Text */
+.lead {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+/* Footer */
+footer p {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+}
+
+.cp {
+    cursor: pointer;
+}
+
+/* end of the global styles */
+header {
+    background-image: url(../imgs/header.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header .wide-paragraph {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: clamp(2rem, 10vw, 12rem);
+    padding-right: clamp(2rem, 10vw, 12rem);
+}
+
+/* steps section */
+/* Step Card */
+.step-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-height: 290px;
+
+    @media (max-width:500px) {
+        min-height: 250px;
+
+    }
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+
+}
+
+.step-card h4 {
+    margin-top: 50px;
+    color: var(--main-color);
+}
+
+.step-card p {
+    color: #3D5579;
+}
+
+/* Step Number */
+.step-number {
+    background: #EDF3FB;
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    padding: 5px 12px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 30px 0px rgba(150, 150, 150, 0.16);
+}
+
+/* our values section */
+.our-values {
+    background-image: url(../imgs/values.webp);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 70%;
+}
+
+.our-values .value-card {
+    border-radius: 16.613px;
+    background: rgba(8, 15, 30, 0.37);
+    box-shadow: 0px 5.538px 41.532px 0px rgba(63, 61, 61, 0.16);
+    backdrop-filter: blur(52px);
+    padding: 44.3px;
+
+}
+
+
+/* Partners Section */
+.partners-section {
+    background-color: #ffffff;
+}
+
+/* Partner Logos */
+.partner-logo {
+    max-width: 100%;
+    filter: grayscale(100%);
+    /* Makes logos grayscale */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0);
+    /* Colorize logo on hover */
+    transform: scale(1.05);
+}
+
+/* Nav Tabs Customization */
+.nav-tabs .nav-link {
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* footer  section */
+footer {
+    background-image: url(../imgs/footer-bg.webp);
+    background-repeat: no-repeat;
+
+    @media (max-width:500px) {
+        background-position: top center;
+        background-size: 80% 100%;
+
+    }
+}
+
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.footer ul li a:hover {
+    color: #ffffff !important;
+}
