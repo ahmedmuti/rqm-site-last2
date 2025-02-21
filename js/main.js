@@ -1,22 +1,26 @@
-var swiper1 = new Swiper(".mySwiper", {
-    // slidesPerView: "auto",
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1",
-    },
-    breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-    },
-});
 
 
+if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('#partner')) {
+
+    var swiper1 = new Swiper(".mySwiper", {
+        // slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        },
+    });
+
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     let navbar = document.getElementById("navbar");
@@ -30,12 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.remove("scrolled");
         }
     });
-
-    // Add active link effect
-    // document.querySelectorAll(".nav-link").forEach(function (link) {
-    //     link.addEventListener("click", function () {
-    //         document.querySelectorAll(".nav-link").forEach((el) => el.classList.remove("active"));
-    //         this.classList.add("active");
-    //     });
-    // });
 });
