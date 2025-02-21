@@ -515,14 +515,14 @@
 
 
         // let swiperInstance = null
-        function initializeSwiper(className) {
-            let swiperInstance = null
+        let swiperInstance = null
+        function initializeSwiper() {
 
             if (swiperInstance) {
                 swiperInstance.destroy(true, true);
             }
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            swiperInstance = new Swiper(className, {
+            swiperInstance = new Swiper(".swiper-marquee", {
                 slidesPerView: 'auto',
                 spaceBetween: 40,
                 loop: true,
@@ -538,18 +538,53 @@
 
         // Initialize Swiper when the page loads (for the active tab)
         if (document.querySelector(".tab-pane.active .swiper-marquee")) {
-            initializeSwiper(".swiper-marquee");
-        }
-        if (document.querySelector(".tab-pane.active .swiper-marquee2")) {
-            initializeSwiper(".swiper-marquee2");
+            initializeSwiper();
         }
         // Reinitialize Swiper when switching tabs
         document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(function (tab) {
             tab.addEventListener("shown.bs.tab", function () {
-                initializeSwiper(".swiper-marquee");
-                initializeSwiper(".swiper-marquee2");
+                initializeSwiper();
             });
         });
+    </script>
+
+    <script>
+
+        (function () {
+
+            // let swiperInstance = null
+            let swiperInstance2 = null
+            function initializeSwiper() {
+
+                if (swiperInstance2) {
+                    swiperInstance2.destroy(true, true);
+                }
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                swiperInstance2 = new Swiper(".swiper-marquee2", {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40,
+                    loop: true,
+                    speed: 2500,
+                    allowTouchMove: false,
+                    autoplay: prefersReducedMotion ? false : {
+                        delay: 1,
+                        disableOnInteraction: false,
+                    },
+                    // rtl: true
+                });
+            }
+
+            // Initialize Swiper when the page loads (for the active tab)
+            if (document.querySelector(".tab-pane.active .swiper-marquee")) {
+                initializeSwiper();
+            }
+            // Reinitialize Swiper when switching tabs
+            document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(function (tab) {
+                tab.addEventListener("shown.bs.tab", function () {
+                    initializeSwiper();
+                });
+            });
+        })();
     </script>
 </body>
 
