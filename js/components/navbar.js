@@ -3,6 +3,22 @@ class Navbar extends HTMLElement {
         super();
     }
 
+    changeBackground() {
+        document.addEventListener("DOMContentLoaded", function () {
+            let navbar = document.getElementById("navbar");
+            let stepsSection = document.getElementById("change-navbar");
+
+            // Add shadow effect when scrolling
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > (stepsSection.offsetTop - 100)) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        });
+
+    }
     toggleNavbar() {
         const toggler = this.querySelector(".navbar-toggler");
         toggler?.addEventListener("click", function () {
@@ -71,6 +87,7 @@ class Navbar extends HTMLElement {
         `;
 
         this.toggleNavbar();
+        this.changeBackground();
     }
 }
 

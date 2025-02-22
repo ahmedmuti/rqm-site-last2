@@ -71,7 +71,7 @@
 
     <main>
 
-        <section id="steps" class="service-section">
+        <section id="change-navbar" class="service-section">
             <div class="container py-5">
                 <!-- Section Title -->
                 <div class="d-flex flex-wrap justify-content-between align-items-start mb-4">
@@ -652,7 +652,28 @@
             });
         })();
     </script>
+    <script>
+        (() => {
+            var swiper1 = new Swiper(".mySwiper", {
+                // slidesPerView: "auto",
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next1",
+                    prevEl: ".swiper-button-prev1",
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 }
+                },
+            });
 
+        })()
+    </script>
 
 </body>
 
