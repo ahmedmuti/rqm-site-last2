@@ -118,7 +118,7 @@ p {
 
 .navbar .nav-link {
     font-size: clamp(1rem, 1.2vw, 1.125rem);
-    color: #fff;
+    /* color: #fff; */
 }
 
 /* Lead Text */

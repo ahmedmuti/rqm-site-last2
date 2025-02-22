@@ -12,13 +12,13 @@ class Footer extends HTMLElement {
             <div class="container">
                 <div class="row align-items-start">
                     <!-- Logo & Tagline -->
-                    <div class="col-lg-3 col-md-12 text-xl-end text-center my-4 my-lg-0">
+                    <div class="col-lg-3 col-md-12 text-xl-start text-center my-4 my-lg-0">
                         <img src="${logoSrc}" alt="Logo" class="mb-2" style="max-width: 100px;">
                         <p class="small">بوابتك للمستقبل الرقمي</p>
                     </div>
 
                     <!-- About Section -->
-                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-start text-center">
                         <h6 class="fw-bold mb-3">عن رقم</h6>
                         <ul class="list-unstyled p-0">
                             <li><a href="#" class="text-decoration-none ${textColor}">الرئيسية</a></li>
@@ -28,7 +28,7 @@ class Footer extends HTMLElement {
                     </div>
 
                     <!-- Useful Links -->
-                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-start text-center">
                         <h6 class="fw-bold mb-3">روابط تهمك</h6>
                         <ul class="list-unstyled p-0">
                             <li><a href="#" class="text-decoration-none ${textColor}">سياسة الخصوصية</a></li>
@@ -37,13 +37,13 @@ class Footer extends HTMLElement {
                     </div>
 
                     <!-- Location -->
-                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-start text-center">
                         <h6 class="fw-bold mb-3">مقرنا</h6>
                         <p class="small mb-0">طريق عثمان بن عفان - الرياض 12481</p>
                     </div>
 
                     <!-- Social Media -->
-                   <div class="col-lg-3 col-md-4 col-6 text-xl-end text-center">
+                   <div class="col-lg-3 col-md-4 col-6 text-xl-start text-center">
                     <h6 class="fw-bold mb-4">تابعنا</h6>
                     <div class="social-icons ">
                         <a href="https://www.linkedin.com/company/byrqm-sa" target="_blank"

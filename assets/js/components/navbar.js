@@ -67,7 +67,7 @@ class Navbar extends HTMLElement {
 
                 <!-- Navbar Menu -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto px-4 mt-lg-0 mt-4 mb-lg-0">
+                    <ul class="navbar-nav me-auto px-4 mt-lg-0 mt-4 mb-lg-0">
                         <li class="nav-item mx-lg-3">
                             <a class="nav-link" href="/">الرئيسية</a>
                         </li>
@@ -82,7 +82,7 @@ class Navbar extends HTMLElement {
                         </li>
                     </ul>
                     <!-- Language Switcher & Contact Button (For Desktop) -->
-                    <ul class="navbar-nav d-none px-0 d-lg-flex me-lg-auto">
+                    <ul class="navbar-nav d-none px-0 d-lg-flex ms-lg-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <button class="contact-us main-color">تواصل معنا</button>
