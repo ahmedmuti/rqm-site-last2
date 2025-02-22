@@ -78,7 +78,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-size: clamp(1.75rem, 4vw, 2.8rem);
     line-height: 1.3;
 }
 
@@ -141,7 +141,7 @@ footer p {
     background: rgba(255, 255, 255, 0.30);
     backdrop-filter: blur(130px);
     display: flex;
-    max-width: 1248px;
+    max-width: 1300px;
     padding: 15px 24px;
     justify-content: space-between;
     align-items: center;
@@ -431,6 +431,18 @@ footer {
 
 }
 
+.why-rqm-page {
+    background-image: url(../../assets/imgs/why-rqm-bg1.webp);
+    /* background-size: cover; */
+    height: 423px !important;
+
+    .services-page h2 {
+        margin-top: 120px !important;
+    }
+
+}
+
+
 .services-page-section-2 {
 
     p.lead {
@@ -528,4 +540,27 @@ footer {
     }
 
 
+}
+
+
+
+/* why rqm page */
+.why-rqm {
+    background-image: url('../imgs/why-rqm-bg.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .item {
+        border-radius: 16.613px;
+        background: rgba(8, 15, 30, 0.37);
+        box-shadow: 0px 5.538px 41.532px 0px rgba(63, 61, 61, 0.16);
+        backdrop-filter: blur(52px);
+    }
+
+    margin-top: -120px;
+
+}
+
+.vision-and-message {
+    transform: translateY(50%);
 }
