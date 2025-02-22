@@ -420,7 +420,7 @@ footer {
 /* ============================== services page ================== */
 
 .services-page {
-    background-image: url(/imgs/services-bg.webp);
+    background-image: url(../imgs/services-bg.webp);
     /* background-size: cover; */
     height: 423px !important;
 

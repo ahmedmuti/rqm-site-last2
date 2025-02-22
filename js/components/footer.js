@@ -1,39 +1,49 @@
 class Footer extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `    <footer class="footer main-bg text-white py-4">
-        <div class="container">
-            <div class="row align-items-start ">
-                <!-- Logo & Tagline -->
-                <div class="col-lg-3 col-md-12 text-xl-end text-center my-4 my-lg-0 ">
-                    <img src="/imgs/rqm.png" alt="Logo" class="mb-2 " style="max-width: 100px;">
-                    <p class="small text-light">بوابتك للمستقبل الرقمي</p>
-                </div>
+        // Retrieve attributes to customize the footer
+        const bgColor = this.getAttribute('data-bg') || 'main-bg'; // Default background class
+        const textColor = this.getAttribute('data-text') || 'text-white'; // Default text color
+        const logoSrc = this.getAttribute('data-logo') || './imgs/rqm.png'; // Default logo
+        const year = new Date().getFullYear(); // Get current year dynamically
 
-                <!-- About Section -->
-                <div class="col-lg-2 col-md-4 col-6  text-xl-end text-center ">
-                    <h6 class="fw-bold mb-3">عن رقم</h6>
-                    <ul class="list-unstyled p-0">
-                        <li><a href="#" class="text-light text-decoration-none">الرئيسية</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">من نحن</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">الخدمات</a></li>
-                    </ul>
-                </div>
+        // Render Footer HTML
+        this.innerHTML = `
+        <footer class="footer ${bgColor} ${textColor} py-4">
+            <div class="container">
+                <div class="row align-items-start">
+                    <!-- Logo & Tagline -->
+                    <div class="col-lg-3 col-md-12 text-xl-end text-center my-4 my-lg-0">
+                        <img src="${logoSrc}" alt="Logo" class="mb-2" style="max-width: 100px;">
+                        <p class="small">بوابتك للمستقبل الرقمي</p>
+                    </div>
 
-                <!-- Useful Links -->
-                <div class="col-lg-2 col-md-4 col-6  text-xl-end text-center ">
-                    <h6 class="fw-bold mb-3">روابط تهمك</h6>
-                    <ul class="list-unstyled p-0">
-                        <li><a href="#" class="text-light text-decoration-none">سياسة الخصوصية</a></li>
-                        <li><a href="#" class="text-light text-decoration-none">تواصل معنا</a></li>
-                    </ul>
-                </div>
+                    <!-- About Section -->
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                        <h6 class="fw-bold mb-3">عن رقم</h6>
+                        <ul class="list-unstyled p-0">
+                            <li><a href="#" class="text-decoration-none ${textColor}">الرئيسية</a></li>
+                            <li><a href="#" class="text-decoration-none ${textColor}">من نحن</a></li>
+                            <li><a href="#" class="text-decoration-none ${textColor}">الخدمات</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Location -->
-                <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center ">
-                    <h6 class="fw-bold mb-3">مقرنا</h6>
-                    <p class="small text-light mb-0">طريق عثمان بن عفان - الرياض 12481</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 text-xl-end text-center">
+                    <!-- Useful Links -->
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                        <h6 class="fw-bold mb-3">روابط تهمك</h6>
+                        <ul class="list-unstyled p-0">
+                            <li><a href="#" class="text-decoration-none ${textColor}">سياسة الخصوصية</a></li>
+                            <li><a href="#" class="text-decoration-none ${textColor}">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="col-lg-2 col-md-4 col-6 text-xl-end text-center">
+                        <h6 class="fw-bold mb-3">مقرنا</h6>
+                        <p class="small mb-0">طريق عثمان بن عفان - الرياض 12481</p>
+                    </div>
+
+                    <!-- Social Media -->
+                   <div class="col-lg-3 col-md-4 col-6 text-xl-end text-center">
                     <h6 class="fw-bold mb-4">تابعنا</h6>
                     <div class="social-icons ">
                         <a href="https://www.linkedin.com/company/byrqm-sa" target="_blank"
@@ -88,24 +98,19 @@ class Footer extends HTMLElement {
                         </a>
                     </div>
                 </div>
-            </div>
+                </div>
 
-
-
-            <!-- Copyright -->
-            <div class="row text-center mt-5">
-                <div class="col-12">
-                    <hr class="text-light">
-                    <p class="small text-light mb-0">جميع الحقوق محفوظة لشركة رقم © 2025</p>
+                <!-- Copyright -->
+                <div class="row text-center mt-5">
+                    <div class="col-12">
+                        <hr>
+                        <p class="small mb-0">جميع الحقوق محفوظة لشركة رقم © ${year}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>`;
-
-
+        </footer>`;
     }
-
 }
 
+// Define the custom element
 customElements.define('footer-component', Footer);
-
