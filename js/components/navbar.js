@@ -39,15 +39,16 @@ class Navbar extends HTMLElement {
 
 
     }
-    connectedCallback(bg) {
-        console.log(bg);
+    connectedCallback(ops) {
+
+        console.log(ops);
 
         this.innerHTML = `
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark navbar-bg fixed-top mt-3 mt-lg-5">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <img src="/imgs/rqm-white.png" width="89" height="47" alt="">
+                <img src="${ops?.isHome ? './imgs/rqm-white.png' : '../imgs/rqm-white.png'}" width="89" height="47" alt="">
             </a>
 
             <!-- Navbar Toggler -->
