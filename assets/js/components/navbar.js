@@ -9,8 +9,9 @@ class Navbar extends HTMLElement {
             let stepsSection = document.getElementById("change-navbar");
 
             // Add shadow effect when scrolling
+            // (stepsSection.offsetTop - 100)
             window.addEventListener("scroll", function () {
-                if (window.scrollY > (stepsSection.offsetTop - 100)) {
+                if (window.scrollY > 200) {
                     navbar.classList.add("scrolled");
                     navbar.style.cssText = `
                      margin-top: 0px !important;
@@ -19,7 +20,7 @@ class Navbar extends HTMLElement {
                     navbar.classList.remove("scrolled");
 
                     navbar.style.cssText = `
-                    margin-top: 50px !important;
+                    margin-top: 30px !important;
                    `
 
                 }
