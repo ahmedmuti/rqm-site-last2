@@ -60,7 +60,7 @@ class Navbar extends HTMLElement {
 
             <!-- Navbar Menu -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto  px-2 mt-lg-0 mt-4 mb-lg-0">
+                <ul class="navbar-nav ms-auto  px-4 mt-lg-0 mt-4 mb-lg-0">
                     <li class="nav-item mx-lg-3">
                         <a class="nav-link" href="#">الرئيسية</a>
                     </li>
