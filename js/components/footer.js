@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
             <div class="row align-items-start ">
                 <!-- Logo & Tagline -->
                 <div class="col-lg-3 col-md-12 text-xl-end text-center my-4 my-lg-0 ">
-                    <img src="./imgs/rqm.png" alt="Logo" class="mb-2 " style="max-width: 100px;">
+                    <img src="/imgs/rqm.png" alt="Logo" class="mb-2 " style="max-width: 100px;">
                     <p class="small text-light">بوابتك للمستقبل الرقمي</p>
                 </div>
 

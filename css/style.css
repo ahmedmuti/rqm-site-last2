@@ -172,8 +172,11 @@ footer p {
     background-color: var(--main-color);
 }
 
-header {
+header.home-page {
     background-image: url(../imgs/header.webp);
+}
+
+header {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -412,4 +415,16 @@ footer {
 
 .footer ul li a:hover {
     color: #ffffff !important;
+}
+
+/* ============================== services page ================== */
+
+.services-page {
+    background-image: url(/imgs/services-bg.webp);
+    /* background-size: cover; */
+    height: 423px !important;
+}
+
+.services-page h2 {
+    margin-top: 120px !important;
 }

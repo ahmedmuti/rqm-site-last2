@@ -1,6 +1,7 @@
 class Navbar extends HTMLElement {
 
 
+
     // highlightActiveLink() {
     //     // Get all anchor links inside the navbar
     //     const links = this.querySelectorAll('.nav-link');
@@ -38,13 +39,15 @@ class Navbar extends HTMLElement {
 
 
     }
-    connectedCallback() {
+    connectedCallback(bg) {
+        console.log(bg);
+
         this.innerHTML = `
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark navbar-bg fixed-top mt-3 mt-lg-5">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <img src="./imgs/rqm-white.png" width="89" height="47" alt="">
+                <img src="/imgs/rqm-white.png" width="89" height="47" alt="">
             </a>
 
             <!-- Navbar Toggler -->
@@ -62,13 +65,13 @@ class Navbar extends HTMLElement {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto  px-4 mt-lg-0 mt-4 mb-lg-0">
                     <li class="nav-item mx-lg-3">
-                        <a class="nav-link" href="#">الرئيسية</a>
+                        <a class="nav-link" href="/">الرئيسية</a>
                     </li>
                     <li class="nav-item mx-lg-3">
-                        <a class="nav-link" href="#">عن رقم</a>
+                        <a class="nav-link" href="">عن رقم</a>
                     </li>
                     <li class="nav-item mx-lg-3">
-                        <a class="nav-link" href="#">الخدمات</a>
+                        <a class="nav-link" href="/services">الخدمات</a>
                     </li>
                     <li class="nav-item mx-lg-3">
                         <a class="nav-link" href="#">تواصل معنا</a>
