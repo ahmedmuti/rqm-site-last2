@@ -21,9 +21,9 @@ class Footer extends HTMLElement {
                     <div class="col-lg-2 col-md-4 col-6 text-xl-start text-center">
                         <h6 class="fw-bold mb-3">عن رقم</h6>
                         <ul class="list-unstyled p-0">
-                            <li><a href="#" class="text-decoration-none ${textColor}">الرئيسية</a></li>
-                            <li><a href="#" class="text-decoration-none ${textColor}">من نحن</a></li>
-                            <li><a href="#" class="text-decoration-none ${textColor}">الخدمات</a></li>
+                            <li><a href="/" class="text-decoration-none ${textColor}">الرئيسية</a></li>
+                            <li><a href="/about" class="text-decoration-none ${textColor}">من نحن</a></li>
+                            <li><a href="/services" class="text-decoration-none ${textColor}">الخدمات</a></li>
                         </ul>
                     </div>
 
@@ -31,8 +31,8 @@ class Footer extends HTMLElement {
                     <div class="col-lg-2 col-md-4 col-6 text-xl-start text-center">
                         <h6 class="fw-bold mb-3">روابط تهمك</h6>
                         <ul class="list-unstyled p-0">
-                            <li><a href="#" class="text-decoration-none ${textColor}">سياسة الخصوصية</a></li>
-                            <li><a href="#" class="text-decoration-none ${textColor}">تواصل معنا</a></li>
+                            <li><a href="/privacy-policy" class="text-decoration-none ${textColor}">سياسة الخصوصية</a></li>
+                            <li><a href="/contact" class="text-decoration-none ${textColor}">تواصل معنا</a></li>
                         </ul>
                     </div>
 

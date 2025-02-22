@@ -84,7 +84,7 @@ class Navbar extends HTMLElement {
                     <!-- Language Switcher & Contact Button (For Desktop) -->
                     <ul class="navbar-nav d-none px-0 d-lg-flex ms-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/contact">
                                 <button class="contact-us main-color">تواصل معنا</button>
                             </a>
                         </li>
