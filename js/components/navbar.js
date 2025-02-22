@@ -12,8 +12,16 @@ class Navbar extends HTMLElement {
             window.addEventListener("scroll", function () {
                 if (window.scrollY > (stepsSection.offsetTop - 100)) {
                     navbar.classList.add("scrolled");
+                    navbar.style.cssText = `
+                     margin-top: 0px !important;
+                    `
                 } else {
                     navbar.classList.remove("scrolled");
+
+                    navbar.style.cssText = `
+                    margin-top: 50px !important;
+                   `
+
                 }
             });
         });
@@ -43,7 +51,7 @@ class Navbar extends HTMLElement {
 
         // Set Navbar HTML with dynamic attributes
         this.innerHTML = `
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-${theme} ${bgColor} fixed-top mt-3 mt-lg-5">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-${theme} ${bgColor} fixed-top ">
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
