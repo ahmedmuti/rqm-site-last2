@@ -3,7 +3,7 @@ class Footer extends HTMLElement {
         // Retrieve attributes to customize the footer
         const bgColor = this.getAttribute('data-bg') || 'main-bg'; // Default background class
         const textColor = this.getAttribute('data-text') || 'text-white'; // Default text color
-        const logoSrc = this.getAttribute('data-logo') || './imgs/rqm.png'; // Default logo
+        const logoSrc = this.getAttribute('data-logo') || './assets/imgs/rqm.png'; // Default logo 
         const year = new Date().getFullYear(); // Get current year dynamically
 
         // Render Footer HTML

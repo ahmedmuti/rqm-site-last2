@@ -174,7 +174,7 @@ footer p {
 }
 
 header.home-page {
-    background-image: url(../imgs/header.webp);
+    background-image: url(../../assets/imgs/header.webp);
 }
 
 header {
@@ -281,7 +281,7 @@ header .wide-paragraph {
 
 /* our values section */
 .our-values {
-    background-image: url(../imgs/values.webp);
+    background-image: url(../../assets/imgs/values.webp);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 70%;
@@ -392,7 +392,7 @@ button.nav-link {
 
 /* footer  section */
 footer {
-    background-image: url(../imgs/footer-bg.webp);
+    background-image: url(../../assets/imgs/footer-bg.webp);
     background-repeat: no-repeat;
 
     @media (max-width:500px) {
@@ -421,7 +421,7 @@ footer {
 /* ============================== services page ================== */
 
 .services-page {
-    background-image: url(../imgs/services-bg.webp);
+    background-image: url(../../assets/imgs/services-bg.webp);
     /* background-size: cover; */
     height: 423px !important;
 

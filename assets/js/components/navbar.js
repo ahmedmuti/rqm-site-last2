@@ -47,14 +47,14 @@ class Navbar extends HTMLElement {
         // Get attributes passed from the component usage
         const theme = this.getAttribute('data-theme') || 'dark'; // default: dark theme
         const bgColor = this.getAttribute('data-bg') || 'navbar-bg';
-        const logoSrc = this.getAttribute('data-logo') || './imgs/rqm-white.png';
+        const logoSrc = this.getAttribute('data-logo') || './assets/imgs/rqm-white.png';
 
         // Set Navbar HTML with dynamic attributes
         this.innerHTML = `
         <nav id="navbar" class="navbar navbar-expand-lg navbar-${theme} ${bgColor} fixed-top ">
             <div class="container">
                 <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="${logoSrc}" width="89" height="47" alt="">
                 </a>
 
@@ -72,13 +72,13 @@ class Navbar extends HTMLElement {
                             <a class="nav-link" href="/">الرئيسية</a>
                         </li>
                         <li class="nav-item mx-lg-3">
-                            <a class="nav-link" href="">عن رقم</a>
+                            <a class="nav-link" href="/about">عن رقم</a>
                         </li>
                         <li class="nav-item mx-lg-3">
                             <a class="nav-link" href="/services">الخدمات</a>
                         </li>
                         <li class="nav-item mx-lg-3">
-                            <a class="nav-link" href="#">تواصل معنا</a>
+                            <a class="nav-link" href="/contact">تواصل معنا</a>
                         </li>
                     </ul>
                     <!-- Language Switcher & Contact Button (For Desktop) -->
