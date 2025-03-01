@@ -25,7 +25,7 @@ body {
     font-weight: 400;
     font-size: clamp(1rem, 1.2vw, 1.125rem);
     line-height: 1.6;
-    background-color: #fbfbfb;
+    background-color: #f5f5f5;
 
 }
 
@@ -113,7 +113,7 @@ p {
 /* Navbar Links */
 .navbar {
     transition: all 0.5s;
-    margin-top: 50px !important;
+    margin-top: 30px !important;
 }
 
 .navbar .nav-link {
@@ -123,7 +123,7 @@ p {
 
 /* Lead Text */
 .lead {
-    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.125rem, 1.5vw, 1.3rem);
 }
 
 /* Footer */
@@ -169,8 +169,22 @@ footer p {
     padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
 }
 
+.navbar .nav-link {
+    color: #fff;
+}
+
 .scrolled {
-    background-color: var(--main-color);
+    background-color: #fff;
+}
+
+.scrolled.navbar .nav-link {
+    color: #000;
+}
+
+.scrolled .contact-us {
+    background-color: #142A53;
+    color: #fff;
+    transition: 0.5s;
 }
 
 header.home-page {
@@ -190,14 +204,14 @@ header .wide-paragraph {
 }
 
 .logo-center {
-    background-color: #f2f2f2;
+    background-color: #f5f5f5;
     /* background-color: red; */
 
 }
 
 .drop-shadow {
     fill: #FFF;
-    filter: drop-shadow(0px 4px 30px rgba(150, 150, 150, 0.16));
+    filter: drop-shadow(0px 4px 30px #f5f5f5);
 }
 
 .logo-center::after {
@@ -210,7 +224,7 @@ header .wide-paragraph {
     top: -50px;
     left: 11px;
     border-bottom-left-radius: 50%;
-    box-shadow: -20px 19px #f2f2f2;
+    box-shadow: -20px 19px #f5f5f5;
 }
 
 .logo-center::before {
@@ -221,7 +235,7 @@ header .wide-paragraph {
     background-color: #fff;
     z-index: 11;
     border-bottom-left-radius: 50%;
-    box-shadow: -27px 17px #f2f2f2;
+    box-shadow: -27px 17px #f5f5f5;
     bottom: 0;
     right: -50px;
 }
@@ -234,10 +248,10 @@ header .wide-paragraph {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    min-height: 290px;
+    min-height: 318px;
 
     @media (max-width:500px) {
-        min-height: 250px;
+        min-height: 280px;
 
     }
 }
@@ -418,6 +432,11 @@ footer {
     color: #ffffff !important;
 }
 
+/* services section */
+.service-section img {
+    max-height: 399px;
+}
+
 /* ============================== services page ================== */
 
 .services-page {
@@ -482,8 +501,11 @@ footer {
 
 
 .services-page-section-3 {
-    background: rgb(111, 182, 209);
-    background: linear-gradient(45deg, rgba(111, 182, 209, 1) 0%, rgba(21, 42, 84, 1) 30%, rgba(21, 42, 84, 1) 47%, rgba(21, 42, 84, 1) 75%);
+    /* background: rgb(111, 182, 209); */
+    /* background: linear-gradient(45deg, rgba(111, 182, 209, 1) 0%, rgba(21, 42, 84, 1) 30%, rgba(21, 42, 84, 1) 47%, rgba(21, 42, 84, 1) 75%); */
+    background-image: url(../imgs/services-bg-4.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
 
     .cyber-security-section {
@@ -562,4 +584,115 @@ footer {
 
 .vision-and-message {
     transform: translateY(50%);
+}
+
+
+/* whatsApp */
+/* Optimized Call Button Styles */
+.cbh-phone {
+    display: block;
+    position: fixed;
+    left: -50px;
+    bottom: -55px;
+    visibility: hidden;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    z-index: 999;
+    transition: visibility 0.5s;
+}
+
+.cbh-phone.cbh-show {
+    visibility: visible;
+}
+
+/* Icon Circle */
+.cbh-ph-img-circle1 {
+    width: 50px;
+    height: 50px;
+    top: 70px;
+    left: 70px;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.1) center center / 40px 40px no-repeat;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: 1;
+    animation: cbh-circle-img-anim 1s infinite ease-in-out;
+}
+
+.cbh-phone.cbh-green .cbh-ph-img-circle1 {
+    background-color: rgb(46, 203, 113);
+}
+
+
+/* mission section */
+.mission .side-menu ul {
+    list-style: none;
+    position: relative;
+
+}
+
+.mission .side-menu ul::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    background-color: #DCDFE5;
+    top: 10px;
+    right: 0;
+}
+
+.mission .side-menu li {
+    position: relative;
+}
+
+.mission .side-menu li:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #58C2C3;
+    border-radius: 50%;
+    top: 10px;
+    right: -39px;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+
+/* Default active state */
+.mission .side-menu li.active::after {
+    background-color: #58C2C3;
+}
+
+.mission .side-menu .active a {
+    font-weight: bold !important;
+
+}
+
+.mission .side-menu a {
+    text-decoration: none;
+    color: #142A53;
+    margin: 50px 0;
+    display: block;
+    font-size: 24px;
+
+    &:hover {
+        cursor: pointer;
+        color: #071124;
+    }
+}
+
+div[data-current] {
+    display: none;
+}
+
+div[data-current='0'] {
+    display: block;
+}
+
+@media (max-width:992px) {
+    div[data-current] {
+        display: flex !important;
+    }
 }

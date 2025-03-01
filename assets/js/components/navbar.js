@@ -1,4 +1,5 @@
 class Navbar extends HTMLElement {
+
     constructor() {
         super();
     }
@@ -6,7 +7,8 @@ class Navbar extends HTMLElement {
     changeBackground() {
         document.addEventListener("DOMContentLoaded", function () {
             let navbar = document.getElementById("navbar");
-            let stepsSection = document.getElementById("change-navbar");
+            let logo = navbar.querySelector(".navbar-brand img");
+            let isContactPage = window.location.pathname.includes("/contact");
 
             // Add shadow effect when scrolling
             // (stepsSection.offsetTop - 100)
@@ -16,6 +18,9 @@ class Navbar extends HTMLElement {
                     navbar.style.cssText = `
                      margin-top: 0px !important;
                     `
+                    if (logo) {
+                        logo.src = logo.src.replace('rqm-white.png', 'rqm-blue.png');
+                    }
                 } else {
                     navbar.classList.remove("scrolled");
 
@@ -23,6 +28,10 @@ class Navbar extends HTMLElement {
                     margin-top: 30px !important;
                    `
 
+
+                    if (logo && !isContactPage) {
+                        logo.src = logo.src.replace('rqm-blue.png', 'rqm-white.png');
+                    }
                 }
             });
         });
@@ -56,7 +65,7 @@ class Navbar extends HTMLElement {
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="${logoSrc}" width="89" height="47" alt="">
+                    <img src="${logoSrc}" width="89" id="white" height="47" alt="">
                 </a>
 
                 <!-- Navbar Toggler -->
